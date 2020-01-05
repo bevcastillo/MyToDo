@@ -82,12 +82,12 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
     private void registerUsers(String strFullName, String strUsername, String strPassw, String strConfPassw) throws IOException, JSONException {
 
         User resp = new User();
-        String json = resp.userPayload(strFullName, strUsername, strPassw, strConfPassw);
+        String json = resp.registerPayload(strFullName, strUsername, strPassw, strConfPassw);
         Log.d("JSON-BODY", json);
         Log.d("REQUEST-URL", Constant.USER_REGISTER_API_URL);
 
-        Toast.makeText(this, json, Toast.LENGTH_LONG).show();
-        resp.post(Constant.USER_REGISTER_API_URL, json, new Callback() {
+//        Toast.makeText(this, json, Toast.LENGTH_LONG).show();
+        resp.registerUser(Constant.USER_REGISTER_API_URL, json, new Callback() {
             @Override
             public void onFailure(@NotNull Call call, @NotNull IOException e) {
                 e.printStackTrace();
@@ -97,7 +97,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
             public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
                 if (response.isSuccessful()) {
                     final String responseStr = response.body().string();
-                    Log.i("LOGIN_RESP", responseStr);
+                    Log.i("REGISTER_RESP", responseStr);
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
@@ -109,7 +109,7 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
                 }
             }
         });
-//        String response = resp.post(Constant.USER_REGISTER_API_URL, json);
+//        String response = resp.registerUser(Constant.USER_REGISTER_API_URL, json);
 //
 //        Toast.makeText(this, response, Toast.LENGTH_LONG).show();
     }
