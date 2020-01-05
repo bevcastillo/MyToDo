@@ -9,8 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AllToDoActivity"
-            android:label="All To Do List"></activity>
+        <activity android:name=".AddToDoActivity"
+            android:label="Add To-Do"
+            android:parentActivityName=".AllToDoActivity"></activity>
+        <activity
+            android:name=".ViewUserProfileActivity"
+            android:parentActivityName=".OtherProfilesActivity" />
+        <activity
+            android:name=".OtherProfilesActivity"
+            android:label="All Users"
+            android:parentActivityName=".AllToDoActivity" />
+        <activity
+            android:name=".UserProfileActivity"
+            android:label="My Profile"
+            android:parentActivityName=".AllToDoActivity" />
+        <activity
+            android:name=".AllToDoActivity"
+            android:label="All To Do List" />
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

@@ -6,6 +6,9 @@
         android:id="@+id/menu_profile"
         android:title="My Profile"/>
     <item
+        android:id="@+id/other_profiles"
+        android:title="All Users"/>
+    <item
         android:id="@+id/menu_settings"
         android:title="Settings"/>
     <item

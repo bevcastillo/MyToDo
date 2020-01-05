@@ -5,22 +5,36 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardBackgroundColor="#fff"
-    app:cardCornerRadius="30dp">
+    app:cardCornerRadius="5dp"
+    app:cardElevation="1dp"
+    android:layout_margin="3dp">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp">
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
 
         <TextView
-            android:id="@+id/textview_to_do"
+            android:id="@+id/textview_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Some text here"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/colorVampireBlack"/>
+
+        <TextView
+            android:id="@+id/textview_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date here"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/textview_title" />
 
         <androidx.appcompat.widget.AppCompatCheckBox
             android:id="@+id/checkbox"

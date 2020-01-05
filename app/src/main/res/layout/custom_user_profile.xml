@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="165dp"
+    android:layout_height="200dp"
+    android:layout_margin="10dp">
+
+    <LinearLayout
+        android:id="@+id/layout_profile"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageview_user"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3"
+            android:src="@drawable/lisa"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/textview_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="You R. Name"
+                android:gravity="center"
+                android:textSize="14dp"
+                android:textColor="@color/colorVampireBlack"/>
+            <TextView
+                android:id="@+id/textview_userName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="your@email.address"
+                android:gravity="center"
+                android:textSize="12dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -33,4 +33,7 @@ dependencies {
 
     implementation "androidx.cardview:cardview:$cardview_version"
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
+
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+
 }
